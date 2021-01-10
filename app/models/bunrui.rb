@@ -1,0 +1,2 @@
+class Bunrui < ApplicationRecord
+end
