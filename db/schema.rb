@@ -42,4 +42,5 @@ ActiveRecord::Schema.define(version: 2021_01_11_062302) do
     t.integer "bunid"
   end
 
+
 end
