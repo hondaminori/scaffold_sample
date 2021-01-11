@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_01_044029) do
+ActiveRecord::Schema.define(version: 2021_01_11_062302) do
 
   create_table "bunruis", force: :cascade do |t|
     t.string "bun_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "parent_id"
+  end
+
+  create_table "parents", force: :cascade do |t|
+    t.string "name"
+    t.integer "child_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
