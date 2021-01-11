@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do |no|
+(0...10).each do |no|
   Bunrui.create( bun_name: "分類 #{no}" )
 end
 
