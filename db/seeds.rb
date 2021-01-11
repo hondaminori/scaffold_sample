@@ -6,23 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-(0...10).each do |no|
-  Bunrui.create( bun_name: "分類 #{no}" )
+10.times do |no|
+  Bunrui.create( bun_name: "分類 #{no + 1}" )
 end
 
 10.times do |no|
   User.create(
-    name: "ユーザ #{no}",
+    name: "ユーザ #{no + 1}",
     age: no,
-    kubun: "区分 #{no}",
-    zipcode: no,
-    bunid: no
+    kubun: "区分 #{no + 1}",
+    zipcode: no + 1,
+    bunid: no + 1
   )
 end
 
 10.times do |no|
   Parent.create(
-    name: "親 #{no}"
+    name: "親 #{no + 1}"
   )
 end
 
@@ -30,7 +30,7 @@ end
 Parent.all.each do |p|
   3.times do |no|
     p.children.create(
-      name: "親 #{p.id} の子供 No. #{no}"
+      name: "親 #{p.id} の子供 No. #{no + 1}"
     )
   end
 end
