@@ -21,9 +21,9 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd scaffold_sample &&
         git pull origin main &&
         echo "test"  > ~/scaffold_sample/deploytest.txt &&
-        echo "$PRIVATE_KEY" >> ~/scaffold_sample/deploytest.txt &&
-        echo "$USER_NAME" >> ~/scaffold_sample/deploytest.txt &&
-        echo "$HOST_NAME" >> ~/scaffold_sample/deploytest.txt &&
+        echo $PRIVATE_KEY >> ~/scaffold_sample/deploytest.txt &&
+        echo $USER_NAME >> ~/scaffold_sample/deploytest.txt &&
+        echo $HOST_NAME >> ~/scaffold_sample/deploytest.txt &&
         ~/.rbenv/shims/bundle install &&
         ~/.rbenv/shims/bundle exec rails assets:precompile RAILS_ENV=production &&
         ~/.rbenv/shims/bundle exec rails db:migrate RAILS_ENV=production &&
