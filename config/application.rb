@@ -15,5 +15,10 @@ module ScaffoldSample
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # ==========ここから追加する==========
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+    # ==========ここまで追加する==========
   end
 end
