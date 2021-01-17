@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_062302) do
+ActiveRecord::Schema.define(version: 2021_01_16_234337) do
 
   create_table "bunruis", force: :cascade do |t|
     t.string "bun_name"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2021_01_11_062302) do
     t.integer "kubun"
     t.integer "zipcode"
     t.integer "bunid"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
