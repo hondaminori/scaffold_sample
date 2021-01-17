@@ -12,13 +12,25 @@ end
 
 10.times do |no|
   User.create(
-    name: "ユーザ #{no + 1}",
+    name: "ユーザあ #{no + 1}",
     age: no,
     kubun: "区分 #{no + 1}",
     zipcode: no + 1,
-    bunid: no + 1
+    bunid: no + 1,
+    email: "test#{no}@a.com",
+    password: "test"
   )
 end
+
+# User.create(
+#   name: "ユーザ",
+#   age: 1,
+#   kubun: "区分1",
+#   zipcode: 1,
+#   bunid: 1,
+#   email: "test@a.com",
+#   password: "test1234"
+# )
 
 10.times do |no|
   Parent.create(
